@@ -1,0 +1,46 @@
+\documentclass[12pt,a4paper]{letter}
+% Norwegian using UTF-8
+\usepackage[norsk]{babel}
+\usepackage{ucs}
+\usepackage[utf8]{inputenc}
+
+% For a 'longer' page layout
+\setlength{\topmargin}{-2cm}
+\setlength{\topskip}{0cm}
+\setlength{\textheight}{25cm}
+\setlength{\footskip}{0cm}
+
+% For better use of Norwegian typography
+\raggedbottom
+\renewcommand\labelitemi{\normalfont\bfseries \textendash}
+\renewcommand\labelitemii{\textbullet}
+
+% Newlines between paragraphs
+\setlength{\parskip}{2ex plus0.3ex minus0.2ex}
+\setlength{\parindent}{0.0cm}
+
+\date{DD. month YYYY}
+
+\begin{document}
+\begin{letter}{Someone
+Address\\
+Town/No\\
+Country(?)}
+					
+From name \\
+From addy \\
+From city\\
+
+
+\bigskip
+
+\opening{TITLE}
+blabla
+
+\bigskip
+
+\closing{Regards, \\
+Som. E. One}
+
+\end{letter}
+\end{document}
