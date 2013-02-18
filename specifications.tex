@@ -1,0 +1,40 @@
+\documentclass[a4paper,12pt,notitlepage]{article}
+\usepackage[utf8]{inputenc}
+
+% define the title and author
+\author{Author}
+\title{Title}
+
+% Norwegian using UTF-8
+\usepackage[nynorsk]{babel}
+\usepackage{ucs}
+\usepackage{color}
+\usepackage{textcomp}
+% Use hyperlinks
+\usepackage{hyperref}
+\hypersetup{pdfborder=0 0 0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%to be inserted in the main file %
+%the \subsubsubsection command makes the 3-folded subsectioning %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\subsubsubsection}{\subsubparagraph}
+
+\makeatletter
+
+\renewcommand\subsubsubsection{\@startsection{paragraph}{4}{0ex}{-3.25ex plus -1ex minus
+-0.2ex}{1.5ex plus 0.2ex}{\normalfont\normalsize\bfseries}}
+\makeatother
+\stepcounter{secnumdepth}
+\stepcounter{tocdepth}
+
+\renewcommand{\paragraph}{\subparagraph}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Start document
+\begin{document}
+\maketitle
+% insert the toc
+\tableofcontents
+\end{document}
