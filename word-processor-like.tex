@@ -1,0 +1,55 @@
+\documentclass[a4paper,12pt]{article}
+\author{Eskild Hustvedt}
+\title{Title}
+
+% Classes:
+% report for long documents
+% article for short documents (doesn't have \chapter{})
+% book for books
+
+% Enable word-processor-like layouts
+\usepackage{wordlike}
+% Use 1 1/2 line spacing
+\usepackage{setspace}
+\onehalfspacing
+% Norwegian
+\usepackage[nynorsk]{babel}
+\usepackage{ucs}
+% Use hyperlinks
+\usepackage{hyperref}
+% Needed to generate the footer
+\usepackage{lastpage}
+% Enable fancy headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{YYYY-MM-DD}
+\fancyhead[C]{Center}
+\fancyhead[R]{Right}
+\fancyfoot[L]{\thepage\ av \pageref{LastPage}}
+\fancyfoot[C]{}
+% Force footnotes to stay on the same page
+\interfootnotelinepenalty=10000
+% Bibliography style
+\usepackage{chicago}
+\bibliographystyle{chicago}
+
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\setsansfont{Liberation Sans}
+
+% Start document
+\begin{document}
+
+% ----------------------------------------------------------------
+
+% Generates the titlepage
+\maketitle
+\thispagestyle{fancy}
+% insert the toc
+\tableofcontents
+% Add a new page after the toc
+\newpage
+
+% Begin main content
+
+\end{document}
