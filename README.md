@@ -1,5 +1,12 @@
 # LaTeX templates for Eskild Hustvedt
 
+## hib-paper.tex
+
+A LaTeX paper template that fits the style specifications for HiB (Høgskolen i
+Bergen/Bergen University College). Citation and bibliography fits the Harvard
+style as presented on [Søk og
+skriv](http://sokogskriv.no/kildebruk-og-referanser/referansestiler/harvard/).
+
 ## letter.tex
 
 A basic Norwegian letter template

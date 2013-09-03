@@ -1,0 +1,49 @@
+\documentclass[a4paper,12pt,titlepage]{article}
+\author{Eskild Hustvedt}
+\title{Title}
+\date{YYYY-MM-DD}
+
+% Norwegian using UTF-8
+\usepackage[nynorsk]{babel}
+% Use hyperlinks
+\usepackage{hyperref}
+% Style
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% Force footnotes to stay on the same page
+\interfootnotelinepenalty=10000
+% Bibliography style (harvard according to
+% http://sokogskriv.no/kildebruk-og-referanser/referansestiler/harvard/)
+\usepackage[style=authoryear,maxbibnames=99,maxcitenames=3,sorting=nyt,firstinits,alldates=iso8601]{biblatex}
+\DeclareNameAlias{sortname}{last-first}
+\setlength\bibitemsep{1.5\itemsep}
+\DefineBibliographyStrings{nynorsk}{%
+    andothers = {et al.},
+    urlseen = {besøkt}
+}
+
+% \textsubscript and \textsuperscript
+\usepackage{fixltx2e}
+
+% The tabularx environment (better tables)
+\usepackage{tabularx}
+
+% Use proper fonts
+\usepackage{fontspec}
+
+% Start document
+\begin{document}
+
+% ----------------------------------------------------------------
+
+% Generates the titlepage
+\maketitle
+
+% Begin main content
+
+% Bibliography
+\newpage
+
+\printbibliography
+
+\end{document}
