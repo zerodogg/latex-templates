@@ -6,6 +6,7 @@ A LaTeX paper template that fits the style specifications for HiB (Høgskolen i
 Bergen/Bergen University College). Citation and bibliography fits the Harvard
 style as presented on [Søk og
 skriv](http://sokogskriv.no/kildebruk-og-referanser/referansestiler/harvard/).
+Requires XeTeX, and uses biblatex instead of bibtex.
 
 ## letter.tex
 
