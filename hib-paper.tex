@@ -1,8 +1,8 @@
-\documentclass[a4paper,12pt,titlepage]{article}
 \author{Eskild Hustvedt}
 \title{Title}
 \date{YYYY-MM-DD}
 
+\documentclass[a4paper,12pt,titlepage]{article}
 % Norwegian using UTF-8
 \usepackage[nynorsk]{babel}
 % Use hyperlinks
@@ -17,10 +17,17 @@
 \usepackage[style=authoryear,maxbibnames=99,maxcitenames=3,sorting=nyt,firstinits,alldates=iso8601]{biblatex}
 \DeclareNameAlias{sortname}{last-first}
 \setlength\bibitemsep{1.5\itemsep}
-\DefineBibliographyStrings{nynorsk}{%
+\DefineBibliographyStrings{nynorsk}{
     andothers = {et al.},
     urlseen = {besøkt}
 }
+
+% Use 1 1/2 line spacing
+\usepackage{setspace}
+\onehalfspacing
+
+% Use an empty line to indicate new paragraphs
+\usepackage{parskip}
 
 % \textsubscript and \textsuperscript
 \usepackage{fixltx2e}
@@ -30,6 +37,10 @@
 
 % Use proper fonts
 \usepackage{fontspec}
+
+% Provides the "H" placement for figures, tables etc. which gives better control
+% over where a figure appears.
+\usepackage{float}
 
 % Start document
 \begin{document}
