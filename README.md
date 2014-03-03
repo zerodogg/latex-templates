@@ -8,6 +8,14 @@ style as presented on [Søk og
 skriv](http://sokogskriv.no/kildebruk-og-referanser/referansestiler/harvard/).
 Requires XeTeX, and uses biblatex instead of bibtex.
 
+## hib-paper-exam.tex
+
+A version of hib-paper.tex that follows the style guidelines more closely by
+overriding additional LaTeX formatting like font, margins etc. and adds a
+custom header. Suitable for exams and other papers where the formatting is
+required to be very close to the guidelines (generally hib-paper.tex will look
+better as that uses default LaTeX fonts and margins).
+
 ## letter.tex
 
 A basic Norwegian letter template
