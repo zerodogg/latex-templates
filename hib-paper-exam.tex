@@ -23,6 +23,10 @@
 \fancyfoot[L]{\thepage\ av~\pageref{LastPage}}
 \fancyfoot[C]{}
 
+% Include a decimal in top-level sections (ref: the HiB writing guidelines)
+\renewcommand*\thesection{\arabic{section}.0}
+\renewcommand*\thesubsection{\arabic{section}.\arabic{subsection}}
+
 % -- Bibliography style --
 % Style: harvard according to
 % http://sokogskriv.no/kildebruk-og-referanser/referansestiler/harvard/
