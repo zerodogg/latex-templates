@@ -59,6 +59,10 @@
 % The tabularx environment (better tables)
 \usepackage{tabularx}
 
+% The tabu/longtabu/longtable environment (multi-page tables)
+\usepackage{longtable}
+\usepackage{tabu}
+
 % Use proper fonts
 \usepackage{fontspec}
 \setmainfont{Liberation Serif}
@@ -79,6 +83,24 @@
 % insert the toc
 \tableofcontents
 \newpage
+
+\section{Long table}
+\LTcapwidth=\textwidth
+\tabulinesep=1.2mm
+\begin{longtabu} to \linewidth {|X[1,l]|X[1,l]|}
+        \caption{The caption}
+       \hline
+       \textbf{Header 1} & \textbf{Header 2}\\
+        \hline
+    \endfirsthead
+        \caption*{(tabell \thetable{} fortset)}\\
+        \hline
+        \textbf{Header 1} & \textbf{Header 2}\\
+        \hline
+    \endhead
+    Content 1 & Content 2\\
+    \hline
+\end{longtabu}
 
 % Bibliography
 \newpage
