@@ -12,15 +12,32 @@
 \pagestyle{fancy}
 % Force footnotes to stay on the same page
 \interfootnotelinepenalty=10000
-% Bibliography style (harvard according to
-% http://sokogskriv.no/kildebruk-og-referanser/referansestiler/harvard/)
-\usepackage[style=authoryear,maxbibnames=99,maxcitenames=3,sorting=nyt,firstinits,alldates=iso8601]{biblatex}
+
+% -- Bibliography style --
+% Style: harvard according to
+% http://sokogskriv.no/kildebruk-og-referanser/referansestiler/harvard/
+\usepackage[style=authoryear,maxbibnames=99,maxcitenames=3,sorting=nyt,firstinits,alldates=iso8601,dashed=false,uniquename=init]{biblatex}
+%   Sort by last-name
 \DeclareNameAlias{sortname}{last-first}
+%   Use 1.5 line spacing
 \setlength\bibitemsep{1.5\itemsep}
-\DefineBibliographyStrings{nynorsk}{
+%   Use «et al.» and «besøkt» instead of the defaults
+\DefineBibliographyStrings{nynorsk}{%
     andothers = {et al.},
     urlseen = {besøkt}
 }
+%   Disable quotes around inbook and incollection
+\DeclareFieldFormat[inbook]{citetitle}{#1}
+\DeclareFieldFormat[inbook]{title}{#1}
+\DeclareFieldFormat[incollection]{citetitle}{#1}
+\DeclareFieldFormat[incollection]{title}{#1}
+%   Use & instead of "and"/"og"
+\renewcommand*{\finalnamedelim}{%
+  \ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
+  \addspace\&\space}
+%   Ignore ISBN
+\AtEveryBibitem{\clearfield{isbn}}
+% -- end bibliography style --
 
 % Use 1 1/2 line spacing
 \usepackage{setspace}
