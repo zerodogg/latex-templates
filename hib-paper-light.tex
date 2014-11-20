@@ -1,3 +1,9 @@
+% hib-paper.tex
+% A LaTeX paper template that loosely fits the style specifications for HiB
+% (Høgskolen i Bergen/Bergen University College). See hib-paper.tex for a
+% template that fits the style and README.md for more information.
+% This file is placed in the public domain.
+
 \author{Eskild Hustvedt}
 \title{Title}
 \date{YYYY-MM-DD}
@@ -5,6 +11,10 @@
 \documentclass[a4paper,12pt,titlepage]{article}
 % Norwegian using UTF-8
 \usepackage[nynorsk]{babel}
+
+% Use 1 1/2 line spacing
+\usepackage{setspace}
+\onehalfspacing{}
 % Use hyperlinks
 \usepackage{hyperref}
 % Style
@@ -38,23 +48,20 @@
 %   Ignore ISBN
 \AtEveryBibitem{\clearfield{isbn}}
 % -- end bibliography style --
-
-% Use 1 1/2 line spacing
-\usepackage{setspace}
-\onehalfspacing{}
-
-% Use an empty line to indicate new paragraphs
-\usepackage{parskip}
-
 % \textsubscript and \textsuperscript
 \usepackage{fixltx2e}
 
 % The tabularx environment (better tables)
 \usepackage{tabularx}
 
+% The tabu/longtabu/longtable environment (multi-page tables)
+\usepackage{longtable}
+\usepackage{tabu}
+
 % Use proper fonts
 \usepackage{fontspec}
-
+% Use an empty line to indicate new paragraphs
+\usepackage{parskip}
 % Provides the "H" placement for figures, tables etc. which gives better control
 % over where a figure appears.
 \usepackage{float}
@@ -66,12 +73,33 @@
 
 % Generates the titlepage
 \maketitle
+\thispagestyle{fancy}
+% insert the toc
+\tableofcontents
+\newpage
 
-% Begin main content
+\section{Long table}
+\LTcapwidth=\textwidth
+\tabulinesep=1.2mm
+\begin{longtabu} to \linewidth {|X[1,l]|X[1,l]|}
+        \caption{The caption}\\
+       \hline
+       \textbf{Header 1} & \textbf{Header 2}\\
+        \hline
+    \endfirsthead
+        \caption*{(tabell \thetable{} fortset)}\\
+        \hline
+        \textbf{Header 1} & \textbf{Header 2}\\
+        \hline
+    \endhead
+    Content 1 & Content 2\\
+    \hline
+\end{longtabu}
 
 % Bibliography
 \newpage
 
-\printbibliography{}
+\printbibliography
+\addcontentsline{toc}{section}{Referanser}
 
 \end{document}
