@@ -7,3 +7,5 @@
 *.log
 *.out
 *.toc
+*.bcf
+*.run.xml
