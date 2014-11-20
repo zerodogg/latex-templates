@@ -1,3 +1,8 @@
+% hib-paper.tex
+% A LaTeX paper template that fits the style specifications for HiB (Høgskolen i
+% Bergen/Bergen University College). See README.md for more information.
+% This file is placed in the public domain.
+
 \documentclass[a4paper,12pt,titlepage]{article}
 \author{Eskild Hustvedt}
 \title{Title}
@@ -71,6 +76,9 @@
 % Use an empty line to indicate new paragraphs
 \usepackage{parskip}
 
+% Provides the "H" placement for figures, tables etc. which gives better control
+% over where a figure appears.
+\usepackage{float}
 
 % Start document
 \begin{document}
@@ -88,7 +96,7 @@
 \LTcapwidth=\textwidth
 \tabulinesep=1.2mm
 \begin{longtabu} to \linewidth {|X[1,l]|X[1,l]|}
-        \caption{The caption}
+        \caption{The caption}\\
        \hline
        \textbf{Header 1} & \textbf{Header 2}\\
         \hline
