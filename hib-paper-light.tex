@@ -26,6 +26,16 @@
 % Force footnotes to stay on the same page
 \interfootnotelinepenalty=10000
 
+% Include a decimal in top-level sections (ref: the HiB writing guidelines)
+\renewcommand*\thesection{\arabic{section}.0\ }
+\renewcommand*\thesubsection{\arabic{section}.\arabic{subsection}}
+% Fixes ToC entries when using the above sectioning (otherwise it will omit any
+% spacing between the section number and the section title)
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\l@section}{1.5em}{2em}{}{}
+\makeatother
+
 % -- Bibliography style --
 % Style: harvard according to
 % http://sokogskriv.no/kildebruk-og-referanser/referansestiler/harvard/
