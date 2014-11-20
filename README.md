@@ -34,3 +34,11 @@ A basic template for writing project specifications
 A template for writing documents that look like they're made in a word
 processor like LibreOffice. This is for situations where there are strict
 requirements on how a document should look. Requires XeTeX.
+
+## License
+
+[![CC 0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, Eskild Hustvedt has waived all copyright and
+related or neighboring rights to this work. This work is published from:
+Norway.
