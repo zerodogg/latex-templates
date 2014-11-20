@@ -6,15 +6,16 @@ A LaTeX paper template that fits the style specifications for HiB (Høgskolen i
 Bergen/Bergen University College). Citation and bibliography fits the Harvard
 style as presented on [Søk og
 skriv](http://sokogskriv.no/kildebruk-og-referanser/referansestiler/harvard/).
-Requires XeTeX, and uses biblatex instead of bibtex.
+Requires XeTeX, and uses biblatex instead of bibtex. It overrides the default
+LaTeX fonts and margins, and has a custom header, which makes it fit the HiB
+style guidelines closely.
 
-## hib-paper-exam.tex
+## hib-paper-light.tex
 
-A version of hib-paper.tex that follows the style guidelines more closely by
-overriding additional LaTeX formatting like font, margins etc. and adds a
-custom header. Suitable for exams and other papers where the formatting is
-required to be very close to the guidelines (generally hib-paper.tex will look
-better as that uses default LaTeX fonts and margins).
+A version of hib-paper.tex that does not follow the style guidelines as
+closely. This version does not override the fonts and margins, and has a more
+standard LaTeX header. This may look better, and works for papers where the
+style guidelines are not as strict.
 
 ## letter.tex
 
