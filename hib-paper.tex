@@ -7,9 +7,17 @@
 % Norway. https://creativecommons.org/publicdomain/zero/1.0/
 
 \documentclass[a4paper,12pt,titlepage]{article}
-\author{Eskild Hustvedt}
-\title{Title}
-\date{YYYY-MM-DD}
+% The document title
+\newcommand{\tittel}{TITTEL}
+% The document author
+\newcommand{\forfattar}{Eskild Hustvedt}
+% The document date
+\newcommand{\dato}{YYYY-MM-DD}
+
+% Lets LaTeX know about the title, author and date
+\author{\forfattar}
+\title{\tittel}
+\date{\dato}
 
 % Norwegian using UTF-8
 \usepackage[nynorsk]{babel}
@@ -25,9 +33,9 @@
 % Style
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhead[L]{YYYY-MM-DD}
-\fancyhead[C]{Tittel}
-\fancyhead[R]{Gruppenamn}
+\fancyhead[L]{\dato}
+\fancyhead[C]{\tittel}
+\fancyhead[R]{\forfattar}
 \fancyfoot[L]{\thepage\ av~\pageref{LastPage}}
 \fancyfoot[C]{}
 
