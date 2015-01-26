@@ -1,0 +1,32 @@
+% To the extent possible under law, Eskild Hustvedt has waived all copyright and
+% related or neighboring rights to this work. This work is published from:
+% Norway. https://creativecommons.org/publicdomain/zero/1.0/
+\documentclass[a4paper,12pt,notitlepage]{article}
+
+% Norwegian using UTF-8
+\usepackage[nynorsk]{babel}
+% Use hyperlinks
+\usepackage{hyperref}
+\hypersetup{pdfborder=0 0 0}
+\usepackage{fontspec}
+% Use an empty line to indicate new paragraphs
+\usepackage{parskip}
+
+\newcommand{\sign}[2][5cm]{%
+  \begin{tabular}{@{}p{#1}@{}}
+    #2 \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Sign.}} \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Dato}}
+  \end{tabular}
+}
+\pagestyle{empty}
+
+\begin{document}
+\textbf{KONTRAKT}
+
+Content, bla bla bla.
+
+\vfill
+
+\noindent \sign[6cm]{Name1} \hfill \sign[6cm]{Name2}
+\end{document}

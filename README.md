@@ -17,6 +17,10 @@ closely. This version does not override the fonts and margins, and has a more
 standard LaTeX header. This may look better, and works for papers where the
 style guidelines are not as strict.
 
+## contract.tex
+
+A very basic contract template
+
 ## letter.tex
 
 A basic Norwegian letter template
