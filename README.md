@@ -10,6 +10,11 @@ Requires XeTeX, and uses biblatex instead of bibtex. It overrides the default
 LaTeX fonts and margins, and has a custom header, which makes it fit the HiB
 style guidelines closely.
 
+## hib-paper-complete/
+This directory contains a ready-to-use project that based upon the
+hib-paper.tex style, as well as a HiB-style titlepage. In most cases this will
+be easier and faster to start using than hib-paper.tex is.
+
 ## hib-paper-light.tex
 
 A version of hib-paper.tex that does not follow the style guidelines as
