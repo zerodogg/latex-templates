@@ -61,12 +61,19 @@
 \DeclareFieldFormat[inbook]{title}{#1}
 \DeclareFieldFormat[incollection]{citetitle}{#1}
 \DeclareFieldFormat[incollection]{title}{#1}
+%    Proper URL styling and text
+\DeclareFieldFormat{url}{Tilgjengeleg fra: <\url{#1}>}
+\DeclareFieldFormat{urldate}{[Lest: #1]}
+%    Append [Internett] to online entries
+\DeclareFieldFormat[online]{title}{\textit{#1} [Internett]}
 %   Use & instead of "and"/"og"
 \renewcommand*{\finalnamedelim}{%
   \ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
   \addspace\&\space}
 %   Ignore ISBN
 \AtEveryBibitem{\clearfield{isbn}}
+%   Use parenthesis around the year in plain citations
+\let\cite\textcite
 % -- end bibliography style --
 
 % \textsubscript and \textsuperscript
