@@ -1,0 +1,4 @@
+[submodule "hib-paper-complete"]
+	path = hib-paper-complete
+	url = git@github.com:zerodogg/hib-latex-template.git
+	branch = master
